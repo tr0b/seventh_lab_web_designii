@@ -10,7 +10,8 @@ const BusSchema = new Schema({
 });
 
 BusSchema.pre('save', async function (next) {
-  if (this.clients.size > 20) throw ('A maximum of 20 clients are allowed');
+  if (this.clients.length > 20) throw new Error('A maximum of 20 clients are allowed');
   next();
 });
+
 module.exports = mongoose.model('Bus', BusSchema);

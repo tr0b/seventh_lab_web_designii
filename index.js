@@ -6,8 +6,10 @@ app.use(express.json());
 
 require('./database'); // Database Connection
 const ClientsRoute = require('./routes/client.route')
+const BusesRoute = require('./routes/bus.route')
 
 app.use('/', ClientsRoute)
+app.use('/', BusesRoute)
 
 app.get('/', (req, res) => {
   res.send('Seventh Lab, Web Design II (Bus Services)')

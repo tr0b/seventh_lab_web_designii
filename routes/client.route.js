@@ -8,7 +8,6 @@ const Client = require('../models/client.js');
 // [POST] New Client
 router.post('/clients', async (req, res) => {
   const client = new Client(req.body);
-  console.log(client);
   client.save().then(() => res.status(201).send())
     .catch((e) => res.status(500).send({ err: e.message }));
 });

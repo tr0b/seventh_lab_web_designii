@@ -9,5 +9,5 @@ mongoose.set('useFindAndModify', false);
 
 const MONGODB_URI = 'mongodb://localhost/my_bus_business'
 /* Mongoose Database Connection  */
-mongoose.connect(MONGODB_URI).then(() => console.log('Connected to RestApp DB'))
+mongoose.connect(MONGODB_URI).then(() => console.log('Connected to my_bus_business DB'))
   .catch((error) => console.error(error));
